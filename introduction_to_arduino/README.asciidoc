@@ -2,6 +2,7 @@
 Workshop at the South East Makerspace
 
 === Contributors ===
+- Clive Barry
 - Aileen Drohan
 - David Kirwan
 - Martin Walshe
