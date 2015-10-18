@@ -3,12 +3,14 @@
 \usepackage{natbib} % bibliography stuff
 %
 \usepackage{graphicx} % allows for working with images
-\DeclareGraphicsExtensions{.pdf,.png,.jpeg,.jpg} % configures latex to look for the following image extensions
+\DeclareGraphicsExtensions{.pdf,.png,.jpeg,.jpg,.gif} % configures latex to look for the following image extensions
 %
 \usepackage{setspace} % allows for configuring the linespacing in the document
 %\singlespacing
 \onehalfspacing
 %\doublespacing
+%
+\usepackage{listings}
 %
 \usepackage{amsmath}
 %
@@ -34,7 +36,7 @@
 \setcounter{tocdepth}{4}
 %
 \usepackage{url}
-\urldef{\mailsa}\path|dkirwan@tssg.org, someone@somewhere.com, another@abc.com|
+\urldef{\mailsa}\path|info@southeastmakerspace.org|
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 
@@ -58,13 +60,13 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{David Kirwan%
+\author{Aileen Drohan%
 %\thanks{Please note that the LNCS Editorial assumes that all authors have used
 %the western naming convention, with given names preceding surnames. This determines
 %the structure of the names in the running heads and the author index.}%
-\and Someone Else \and An Other}
+\and David Kirwan \and Martin Walshe}
 %
-\authorrunning{Observing Jovian Decametric Radio Emissions}
+\authorrunning{Introduction to Arduino}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
@@ -95,11 +97,10 @@ What is an Arduino? Some information about what this workshop hopes to achieve e
 \end{abstract}
 %
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Acknowledgements
-\newpage
-\include{preface/acknowledgements}
+%\newpage
+%\include{preface/acknowledgements}
 %
 
 %
@@ -107,15 +108,15 @@ What is an Arduino? Some information about what this workshop hopes to achieve e
 %
 
 %
-\newpage
-\listoffigures
-\addcontentsline{toc}{chapter}{List of Figures}
+%\newpage
+%\listoffigures
+%\addcontentsline{toc}{chapter}{List of Figures}
 %
 
 %
-\newpage
-\listoftables
-\addcontentsline{toc}{chapter}{List of Tables}
+%\newpage
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -139,8 +140,8 @@ What is an Arduino? Some information about what this workshop hopes to achieve e
 %
 
 %
-\appendix
-\include{apendices/appendix}
+%\appendix
+%\include{apendices/appendix}
 %
 
 %
