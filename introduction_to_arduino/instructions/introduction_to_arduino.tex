@@ -1,0 +1,164 @@
+\documentclass[runningheads,a4paper]{llncs}
+%
+\usepackage{natbib} % bibliography stuff
+%
+\usepackage{graphicx} % allows for working with images
+\DeclareGraphicsExtensions{.pdf,.png,.jpeg,.jpg} % configures latex to look for the following image extensions
+%
+\usepackage{setspace} % allows for configuring the linespacing in the document
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+%
+\usepackage{amsmath}
+%
+\usepackage{appendix}
+%
+\usepackage{multirow}
+%
+\usepackage{booktabs,array,dcolumn}
+%
+\usepackage{float}
+%
+\usepackage{eurosym}
+%
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+\captionsetup{compatibility=false}
+\usepackage{subcaption}
+%
+\usepackage[toc]{glossaries}
+\makeglossaries
+%
+\usepackage{amssymb}
+\setcounter{tocdepth}{4}
+%
+\usepackage{url}
+\urldef{\mailsa}\path|dkirwan@tssg.org, someone@somewhere.com, another@abc.com|
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+%Optional Package to add PDF bookmarks and hypertext links
+\usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,urlcolor=black,bookmarksnumbered=true,pdfview=FitB}
+
+\begin{document}
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{An Introduction to Arduino \\a low cost digital prototyping platform}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Introduction to Arduino}
+%
+
+% the name(s) of the author(s) follow(s) next
+%
+% Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{David Kirwan%
+%\thanks{Please note that the LNCS Editorial assumes that all authors have used
+%the western naming convention, with given names preceding surnames. This determines
+%the structure of the names in the running heads and the author index.}%
+\and Someone Else \and An Other}
+%
+\authorrunning{Observing Jovian Decametric Radio Emissions}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{South East Makerspace\\Old Printworks, Thomas Hill\\Waterford City, X91 TW63\\
+\mailsa\\
+\url{https://www.southeastmakerspace.org}}
+%
+
+%
+% a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "llncs.dem"
+% (search for the string "\mainmatter" where a contribution starts).
+% "llncs.dem" accompanies the document class "llncs.cls".
+%
+%\toctitle{Thesis Proposal}
+\tocauthor{SEMS}
+\maketitle
+
+%
+\begin{abstract}
+\begin{figure}
+	\centering
+	\includegraphics[width=8cm]{images/sems}
+\end{figure}
+What is an Arduino? Some information about what this workshop hopes to achieve etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet congue nisi, eu ultrices elit sollicitudin nec. Vestibulum vitae pretium enim. Mauris eu nulla lectus. Donec eu arcu sem. Pellentesque quis metus eget quam efficitur fringilla tristique vitae neque. Nulla at erat ac felis mollis vulputate id vitae justo. Donec ac rutrum neque. Pellentesque at mollis arcu, quis blandit orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+\keywords{arduino, digital electronics, prototyping, introduction}
+\end{abstract}
+%
+
+%% Acknowledgements
+\newpage
+\include{preface/acknowledgements}
+<<<<<<< HEAD
+=======
+%\newpage
+%\include{preface/acknowledgements}
+=======
+>>>>>>> 4d7d12c... - minor changes
+%
+
+%
+\tableofcontents
+%
+
+%
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+%
+
+%
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%
+\include{body/introduction}
+\include{body/experiment1}
+\include{body/experiment2}
+\include{body/experiment3}
+\include{body/experiment4}
+\include{body/experiment5}
+\include{body/conclusions}
+%
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\include{glossary/glossary}
+\renewcommand*{\glsclearpage}{}
+\printglossaries
+%
+
+%
+\appendix
+\include{apendices/appendix}
+<<<<<<< HEAD
+=======
+%\appendix
+%\include{apendices/appendix}
+=======
+>>>>>>> 4d7d12c... - minor changes
+%
+
+%
+\bibliographystyle{plainnat}
+\bibliography{bibliography/bibtex}
+\addcontentsline{toc}{chapter}{Bibliography}
+%
+
+\end{document}
+
+
