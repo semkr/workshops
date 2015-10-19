@@ -2,7 +2,7 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-"Over the years \gls{Arduino} has been the brain of thousands of projects, from everyday objects to complex scientific instruments. A worldwide community of makers - students, hobbyists, artists, programmers, and professionals - has gathered around this open-source platform, their contributions have added up to an incredible amount of accessible knowledge that can be of great help to novices and experts alike."~\citep{arduino-15} 
+"Over the years \gls{Arduino} has been the brain of thousands of projects, from everyday objects to complex scientific instruments. A worldwide community of makers - students, hobbyists, artists, programmers, and professionals - has gathered around this open-source platform, their contributions have added up to an incredible amount of accessible knowledge that can be of great help to novices and experts alike."~\citep{arduino-15-a} 
 
 %
 \begin{figure}[ht]
@@ -156,44 +156,122 @@ The following equation Ohm's Law explains the relationship between Voltage, Curr
 %
 
 
-\begin{itemize}
-	\item Voltage, current \& resistance
-	\item Ohms law
-	\item Resistor, capacitor, LED, photo-resistor
-	\item Breadboard
-	\item Digital vs analogue signals
-\end{itemize}
+\subsection*{Analogue vs Digital Signals}
+
+The world we live in is an analogue one. There are an infinite number of possible combinations of colours smells and sounds. The digital world however is not infinite. It is discrete and finite where we are limited by several factors, such as memory and computational capabilities. In order to represent a real world thing digitally, it is by necessity that some information is lost.
+
+\begin{description}
+	\item[Analogue Signal Examples] \hfill \\
+	The following are some examples of analogue signals:
+	\begin{itemize}
+		\item Temperature
+		\item Sound
+		\item Voltage
+	\end{itemize}
+	%
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=8cm]{images/05}
+		\caption{Analogue Signal \citep{sparkfun-15}}
+		\label{fig:analogue_signal}
+	\end{figure}
+	%
+	
+	\item[Digital Signal Examples] \hfill \\
+	The following are some examples of analogue signals:
+	\begin{itemize}
+		\item Arduino starter kit
+		\item Crash course in digital electronics
+		\item Confidence to use Arduino in future projects
+	\end{itemize}
+	%
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=8cm]{images/06}
+		\caption{Digital Signal \citep{sparkfun-15}}
+		\label{fig:digital_signal}
+	\end{figure}
+	%
+\end{description}
 
 
+
+
+
+
+\newpage
 \section*{Basic Arduino Coding Concepts}
 \addcontentsline{toc}{section}{Basic Arduino Coding Concepts}
 
-\begin{itemize}
-	\item Variables
-	\item setup() function
-	\item loop() function
-\end{itemize}
 
+\begin{description}
+	\item[Variables] \hfill \\
+	A variable is a way of naming and storing a value for later use by the program, such as data from a sensor or an intermediate value used in a calculation~\citep{arduino-15-b}.
+	%
+	\begin{table}
+		\centering
+		\begin{tabular}{p{4cm} l}
+			\toprule
+			Type & Example\\ \midrule
+			char & 'a' \\
+			byte & 0 to 255 \\
+			int & -32,768 to 32,767 \\
+			unsigned int & 0 to 65,535 \\
+			long & -2,147,483,648 to 2,147,483,647 \\
+			unsigned long & 0 to 4,294,967,295 \\
+			float & -3.4028235E38 to 3.4028235E38 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Variable Types in Wiring}
+		\label{tab:wiring_variable_types}
+	\end{table}
+	%
+	There are other more advanced data types such as Arrays, Strings and Pointers, which we won't be going into in this introduction. More information can be found regarding these data types online.
+	
+	\item[setup() function] \hfill \\
+	The setup() function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board~\citep{arduino-15-c}.
+	%
+	\begin{lstlisting}
+// Create int variable to represent
+// a physical pin on the Arduino
+int buttonPin = 3;
 
-\section*{Phenakistoscope Creation}
-\addcontentsline{toc}{section}{Phenakistoscope Creation}
+// setup initializes serial and the button pin
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(buttonPin, INPUT);
+}
+	\end{lstlisting}
+	%
 
+\newpage	
+	\item[loop() function] \hfill \\
+	After creating a setup() function, which initializes and sets the initial values, the loop() function does precisely what its name suggests, and loops consecutively, allowing your program to change and respond. Use it to actively control the Arduino board~\citep{arduino-15-d}.
+	%
+	\begin{lstlisting}
+// Create int variable to represent
+// a physical pin on the Arduino
+const int buttonPin = 3;
 
-\citep{kalif-15-a} \citep{kalif-15-b}
+// setup initializes serial and the button pin
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(buttonPin, INPUT);
+}
 
-
-%
-\begin{table}
-	\centering
-	\begin{tabular}{p{4cm} l}
-		\toprule
-		Column 1 & Column 2\\ \midrule
-		x & 1 \\
-		y & 2 \\
-		z & 3 \\
-		\bottomrule
-	\end{tabular}
-	\caption{Table Caption}
-	\label{tab:table_label}
-\end{table}
-%
+// loop checks the button pin each time,
+// and will send serial if it is pressed
+void loop()
+{
+  if (digitalRead(buttonPin) == HIGH)
+    Serial.write('H');
+  else
+    Serial.write('L');
+  
+  delay(1000);
+}
+	\end{lstlisting}
+	%	
+\end{description}
