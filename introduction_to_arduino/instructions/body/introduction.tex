@@ -166,7 +166,7 @@ The world we live in is an analogue one. There are an infinite number of possibl
 	\begin{itemize}
 		\item Temperature
 		\item Sound
-		\item Voltage
+		\item EM Radiation
 	\end{itemize}
 	%
 	\begin{figure}[ht]
@@ -178,11 +178,11 @@ The world we live in is an analogue one. There are an infinite number of possibl
 	%
 	
 	\item[Digital Signal Examples] \hfill \\
-	The following are some examples of analogue signals:
+	The following are some examples of digital signals:
 	\begin{itemize}
-		\item Arduino starter kit
-		\item Crash course in digital electronics
-		\item Confidence to use Arduino in future projects
+		\item Morse Code
+		\item WIFI
+		\item Binary
 	\end{itemize}
 	%
 	\begin{figure}[ht]
@@ -214,6 +214,7 @@ The world we live in is an analogue one. There are an infinite number of possibl
 			\toprule
 			Type & Example\\ \midrule
 			char & 'a' \\
+			string & 'Hello there' \\
 			byte & 0 to 255 \\
 			int & -32,768 to 32,767 \\
 			unsigned int & 0 to 65,535 \\
@@ -226,21 +227,22 @@ The world we live in is an analogue one. There are an infinite number of possibl
 		\label{tab:wiring_variable_types}
 	\end{table}
 	%
-	There are other more advanced data types such as Arrays, Strings and Pointers, which we won't be going into in this introduction. More information can be found regarding these data types online.
+	There are other more advanced data types such as Arrays, Strings and Pointers, which we won't be going into in this introduction. More information can be found regarding these data types online. See the Arduino online reference library at: https://www.arduino.cc/en/Reference/HomePage.
 	
 	\item[setup() function] \hfill \\
 	The setup() function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board~\citep{arduino-15-c}.
 	%
 	\begin{lstlisting}
-// Create int variable to represent
-// a physical pin on the Arduino
-int buttonPin = 3;
-
 // setup initializes serial and the button pin
 void setup()
 {
   Serial.begin(9600);
-  pinMode(buttonPin, INPUT);
+}
+
+// write to serial, then wait 2 seconds
+void loop(){
+  Serial.write("Hello World");
+  delay(2000);
 }
 	\end{lstlisting}
 	%
@@ -252,7 +254,7 @@ void setup()
 	\begin{lstlisting}
 // Create int variable to represent
 // a physical pin on the Arduino
-const int buttonPin = 3;
+int buttonPin = 3;
 
 // setup initializes serial and the button pin
 void setup()
