@@ -1,15 +1,27 @@
 \chapter*{Experiment 1 - Blink}
 \addcontentsline{toc}{chapter}{Experiment 1 - Blink}
+This example is what one might call the \textit{hello world} example for \gls{Arduino} sketches. We wire up the experiment as shown in the diagram fig:~\ref{fig:exp1_blink}. And upload the sketch code in the next section on page:~\pageref{sketch:exp1}.
 
-Outline each experiment in a separate chapter
+%
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=12cm]{images/07}
+	\caption{LED Blink \citep{fritzing-15}}
+	\label{fig:exp1_blink}
+\end{figure}
+%
 
+When the Arduino boots, the led should flash on for a second, then off for a second and repeat.
 
+\newpage
 \section*{Sketch Code}
-
+\label{sketch:exp1}
 \begin{lstlisting}
 /*
 Blink
 Turns on an LED on for one second, then off for one second, repeatedly.
+
+This example code is in the public domain.
 */
 
 // the setup function runs once when you press reset or power the board
