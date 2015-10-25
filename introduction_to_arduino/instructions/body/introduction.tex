@@ -2,6 +2,9 @@
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
+\section*{What is an Arduino?}
+\addcontentsline{toc}{section}{What is an Arduino?}
+
 "Over the years \gls{Arduino} has been the brain of thousands of projects, from everyday objects to complex scientific instruments. A worldwide community of makers - students, hobbyists, artists, programmers, and professionals - has gathered around this open-source platform, their contributions have added up to an incredible amount of accessible knowledge that can be of great help to novices and experts alike."~\citep{arduino-15-a} 
 
 %
@@ -13,7 +16,21 @@
 \end{figure}
 %
 
-\newpage
+
+\begin{description}
+	\item[Open Source] \hfill \\
+	Open Source can be described as resources and software that can be used, redistributed, rewritten and in some circumstances sold free of charge. The schematics and component list for hardware can also be open source as is the case with the \gls{Arduino} platform~\citep{culkin-11}.
+	
+	\item[Electronics] \hfill \\
+	Technology which makes use of the controlled motion of electrons through different media~\citep{culkin-11}.
+	
+	\item[Prototype] \hfill \\
+	An original form that can serve as a basis or standard for other things~\citep{culkin-11}.
+	
+	\item[Platform] \hfill \\
+	Hardware architecture with software framework on which other software can run~\citep{culkin-11}.
+\end{description}
+
 \section*{Where might an Arduino be used?}
 \addcontentsline{toc}{section}{Where might an Arduino be used?}
 A few contrived examples of where one might use an Arduino in order to automate some process:
@@ -28,7 +45,6 @@ An dog owner wants to ensure her pet is never left without water. She attaches a
 	\item Send SMS to owner about giving the dog water
 \end{itemize}
 
-
 \subsection*{Bird Table Camera}
 A rising social media ornithologist wishes to share pictures from all the visitors to the bird table in his garden. He mounts an infra-red movement sensor on the bird table attached to an \gls{Arduino} which is configured to record an image and send it to Twitter. His neighbours marvel at how many crows he's feeding.
 
@@ -38,7 +54,6 @@ A rising social media ornithologist wishes to share pictures from all the visito
 	\item Transmit image back to PC
 	\item Send tweet with picture of the bird table visitor
 \end{itemize}
-
 
 \subsection*{Fingerprint Door Lock}
 A student is sick of forgetting his keys and being locked out of his house. He uses a fingerprint scanner and an Arduino to make a biometric fingerprint door lock. He needs only scan his thumb print now and the door will unlock.
@@ -51,11 +66,21 @@ A student is sick of forgetting his keys and being locked out of his house. He u
 	\item If valid fingerprint it unlocks the door
 \end{itemize}
 
+%
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=12cm]{images/10}
+	\caption{Arduino Family}
+	\label{fig:arduino_family}
+\end{figure}
+%
+
+There are multiple different flavours of \gls{Arduino}, each with different capability levels and or specialised features. It is through this variety which makes it is possible to use the Arduino in a wide range of situations from home automation to wearable technology.
 
 \newpage
 \section*{Workshop Aims}
 \addcontentsline{toc}{section}{Workshop Aims}
-In this workshop the aim is to give you a crash course in digital electronics, and providing you the basic skills to start using the Arduino micro-controllers in your future projects.
+In this workshop the aim is to give you a crash course in digital electronics, and provide you with the basic skill-set to start using the Arduino or similar micro-controllers in your future projects.
 
 \begin{description}
 	\item[Workshop Requirements] \hfill \\
@@ -137,7 +162,7 @@ Resistance, (SI Unit: $\Omega$ - Ohms) of a circuit is its ability to resist or 
 %
 
 \subsection*{Ohm's Law}
-The following equation Ohm's Law explains the relationship between Voltage, Current and Resistance for an electrical circuit.
+The following equation Ohm's Law explains the relationship between Voltage, Current and Resistance for an electrical circuit. For more information see:~\citep{et-14}.
 
 %
 \begin{figure}[ht]
@@ -173,7 +198,7 @@ The world we live in is an analogue one. There are an infinite number of possibl
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=8cm]{images/05}
-		\caption{Analogue Signal \citep{sparkfun-15}}
+		\caption{Analogue Signal \citep{lindblom-15}}
 		\label{fig:analogue_signal}
 	\end{figure}
 	%
@@ -189,7 +214,7 @@ The world we live in is an analogue one. There are an infinite number of possibl
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=8cm]{images/06}
-		\caption{Digital Signal \citep{sparkfun-15}}
+		\caption{Digital Signal \citep{lindblom-15}}
 		\label{fig:digital_signal}
 	\end{figure}
 	%
