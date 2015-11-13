@@ -253,20 +253,17 @@ The world we live in is an analogue one. There are an infinite number of possibl
 		\label{tab:wiring_variable_types}
 	\end{table}
 	%
-	There are other more advanced data types such as Arrays and Pointers, which we may use, but won't explain them in this introduction. More information can be found regarding these data types online. See the Arduino online reference library at: https://www.arduino.cc/en/Reference/HomePage.
+	Table:~\ref{tab:wiring_variable_types} shows some of the basic variable types available to us for use in the Arduino. There are other more advanced data types such as Arrays and Pointers, which we may use, but won't explain them in this introduction. More information can be found regarding these data types online. See the Arduino online reference library at: https://www.arduino.cc/en/Reference/HomePage.
 	
 	\item[setup() function] \hfill \\
-	The setup() function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board~\citep{arduino-15-c}.
+	The setup() function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each power-up or reset of the Arduino board~\citep{arduino-15-c}.
 	%
 	\begin{lstlisting}
-// setup initializes serial and the button pin
-void setup()
-{
+
+void setup(){ // setup initializes serial
   Serial.begin(9600);
 }
-
-// write to serial, then wait 2 seconds
-void loop(){
+void loop(){ // write to serial, then wait 2 seconds
   Serial.write("Hello World");
   delay(2000);
 }
