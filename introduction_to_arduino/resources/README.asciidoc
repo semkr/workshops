@@ -1,0 +1,12 @@
+== Resources ==
+List of resources used in this workshop.
+
+.Phenakistoscopes
+The following four images are in the public domain and were taken by the photographer _Eadweard Muybridge_.
+
+Source:
+
+- https://commons.wikimedia.org/wiki/File:Eadweard_Muybridge%27s_phenakistoscope,_1893.jpg[phenakistoscope_1.jpg]
+- https://commons.wikimedia.org/wiki/File:The_Desert_(LOC_cph.3g08083).jpg[phenakistoscope_2.jpg]
+- https://commons.wikimedia.org/wiki/File:Politeness_(LOC_cph.3g08085).jpg[phenakistoscope_3.jpg]
+- https://commons.wikimedia.org/wiki/File:Phenakistoscope_3g07692u.jpg[phenakistoscope_4.jpg]
