@@ -1,6 +1,8 @@
 \chapter*{Experiment 5 - Phenakistoscope Creation}
 \addcontentsline{toc}{chapter}{Experiment 5 - Phenakistoscope Creation}
-We wire up the experiment as shown in the diagram fig:~\ref{fig:exp4_mp3}. And upload the sketch code in the next section on page:~\pageref{sketch:exp4}.
+A Phenakistoscope is described as a spinning disc mounted on a handle which is mounted vertically. Printed on the disc is a series of images with a viewing slit cut into the disc in between each image. To use the Phenakistoscope, it is pointed towards a mirror, and the viewer looks through the slits. As the disc spins, the images blend together and an effect of movement is witnessed. It is possible to witness this same effect using a flashing LED in a dark room without the use of a mirror \citep{kalif-15-a} \citep{kalif-15-b} \cite{pepi-11}. For example images of Phenakistoscopes, see the examples on page:~\pageref{fig:phenakistoscopes}.
+
+We wire up the experiment as shown in the diagram fig:~\ref{fig:exp5_phenakistoscope}. And upload the sketch code in the next section on page:~\pageref{sketch:exp5}.
 
 %
 \begin{figure}[ht]
@@ -11,8 +13,7 @@ We wire up the experiment as shown in the diagram fig:~\ref{fig:exp4_mp3}. And u
 \end{figure}
 %
 
-When the Arduino boots, the led should flash on for a second, then off for a second and repeat.
-
+When the Arduino boots, the led should begin to flash repeatedly, on and off. When the \gls{Phenakistoscope} is spinning, the circuit can be used to light up and see the animation moving.
 
 %
 \begin{figure}
@@ -57,7 +58,7 @@ When the Arduino boots, the led should flash on for a second, then off for a sec
 \begin{lstlisting}
 /*
 Blink
-Turns on an LED on for one second, then off for one second, repeatedly.
+Turns on an LED on then off 10 times a second.
 
 This example code is in the public domain.
 */
@@ -74,15 +75,14 @@ void loop() {
   // (HIGH is the voltage level)
   digitalWrite(13, HIGH);
 	
-  //wait for 1000 milliseconds
-  delay(1000);
+  //wait for 50 milliseconds
+  delay(50);
 	
   // turn the LED off by making 
   // the voltage LOW
   digitalWrite(13, LOW);    
 	            
-  // wait for 1000 milliseconds              
-  delay(1000);
+  // wait for 50 milliseconds              
+  delay(50);
 }
 \end{lstlisting}
-\citep{kalif-15-a} \citep{kalif-15-b} \cite{pepi-11}
