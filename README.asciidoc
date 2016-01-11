@@ -2,12 +2,13 @@
 
 A list of workshops run at the South East Makerspace.
 
-=== 2015 ===
+=== 2016 ===
 
 .Upcoming
 - https://wiki.southeastmakerspace.org/projects/workshops/2015/introduction_to_arduino[Introduction to Arduino]
 
-.Finished
+=== 2015 ===
+
 - https://wiki.southeastmakerspace.org/projects/workshops/2015/piezo_microphone[Piezo Microphone]
 - https://wiki.southeastmakerspace.org/projects/workshops/2015/introduction_to_processing[Introduction to Processing]
 
