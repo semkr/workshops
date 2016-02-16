@@ -5,6 +5,9 @@ A list of workshops run at the South East Makerspace.
 === 2016 ===
 
 .Upcoming
+
+
+.Completed
 - https://wiki.southeastmakerspace.org/projects/workshops/2016/introduction_to_arduino[Introduction to Arduino]
 
 === 2015 ===
