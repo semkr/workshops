@@ -8,6 +8,10 @@
 
 #define TOUCHPAD_A_PIN     2
 #define TOUCHPAD_B_PIN     3
+=======
+#define SERIAL_SPEED       115200
+
+#define REPORT_AFTER_TICKS 128
 
 #define PORT_MICROPHONE    A0
 #define PORT_LIGHT         A1
@@ -74,6 +78,24 @@ void loop() {
   static          boolean microphoneMode   = true;
   static unsigned char    temperature      = 0;
    
+=======
+#define MAX_INT            65535
+
+
+void setup() {
+  Serial.begin(SERIAL_SPEED);
+}
+
+void loop() {
+  static unsigned int  valueMicrophone  = 0;
+  static unsigned int  minMicrophone    = MAX_INT;
+  static unsigned int  maxMicrophone    = 0;
+  static unsigned int  valueLight       = 0;
+  static unsigned long sumLight         = 0;
+  static unsigned int  valueTemperature = 0;
+  static unsigned long sumTemperature   = 0;
+  static unsigned int  tick             = 0;
+  
   valueMicrophone  = analogRead(PORT_MICROPHONE );
   valueLight       = analogRead(PORT_LIGHT      );
   valueTemperature = analogRead(PORT_TEMPERATURE);
@@ -105,7 +127,7 @@ void loop() {
     
     Serial.print(maxMicrophone - minMicrophone);
     Serial.print(',');
-    Serial.print(  map(sumLight,       LIGHT_BOTTOM, LIGHT_TOP, 0, 100));
+    Serial.print(  map(sumLight, LIGHT_BOTTOM, LIGHT_TOP, 0, 100));
     Serial.print(',');
     Serial.println(map(sumTemperature, TEMP_BOTTOM,  TEMP_TOP,  0, 100));  
 
@@ -121,6 +143,16 @@ void loop() {
 
     sumTemperature    =constrain(sumTemperature, TEMP_BOTTOM, TEMP_TOP-25);
     temperature      = map(sumTemperature, TEMP_BOTTOM,  TEMP_TOP-25,  0, TEMP_MAX_BRIGHT);
+=======
+
+  if ((tick % REPORT_AFTER_TICKS) == 0 ) {
+    //output data for the processing GUI once in while
+    Serial.print(maxMicrophone - minMicrophone);
+    Serial.print(',');
+    Serial.print(  map(sumLight / REPORT_AFTER_TICKS,         0, 700, 0, 100));
+    Serial.print(',');
+    Serial.println(map(sumTemperature / REPORT_AFTER_TICKS, 400, 500, 0, 100));  
+
     minMicrophone    = MAX_INT;
     maxMicrophone    = 0;
     sumTemperature   = 0;
@@ -204,5 +236,11 @@ void wheel(byte WheelPos) {
   globalR = WheelPos*3 >> brigthness;
   globalG = (85 - WheelPos)*3 >> brigthness;
   globalB = 0;
+}
+
+=======
+  }
+
+  tick++;
 }
 
