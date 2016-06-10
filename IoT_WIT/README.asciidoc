@@ -1,0 +1,10 @@
+== Introduction to Arduino ==
+Workshop at the South East Makerspace
+
+=== Contributors ===
+- Clive Barry
+- Mogue Carpenter
+- Aileen Drohan
+- David Kirwan
+- Anton Krug
+- Martin Walshe
