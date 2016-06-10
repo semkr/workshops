@@ -1,14 +1,14 @@
 import processing.serial.*;
 
-final int     PORT_TO_OPEN   = 4;
+final int     PORT_TO_OPEN   =      4;
 final int     PORT_BAUD_RATE = 115200;
-final boolean VERBOSE        = false;
-final int     PORT_LINE_FEED = 10;      //new line character 
+final boolean VERBOSE        =  false;
+final int     PORT_LINE_FEED =     10;  //new line character 
 
 int x               = 1;                // horizontal position of the graph 
-int lastMicrophone  = 1;                // vertical value for microphone
-int lastLight       = 1;                // vertical value for light
-int lastTemperature = 1;                // vertical value for temperature
+int lastMicrophone  = 0;                // vertical value for microphone
+int lastLight       = 0;                // vertical value for light
+int lastTemperature = 0;                // vertical value for temperature
 
 Serial myPort;       
 
