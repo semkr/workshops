@@ -1,0 +1,150 @@
+\documentclass[runningheads,a4paper]{llncs}
+%
+\usepackage{natbib} % bibliography stuff
+%
+\usepackage{graphicx} % allows for working with images
+\DeclareGraphicsExtensions{.pdf,.png,.jpeg,.jpg,.gif} % configures latex to look for the following image extensions
+%
+\usepackage{setspace} % allows for configuring the linespacing in the document
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+%
+\usepackage{listings}
+%
+\usepackage{amsmath}
+%
+\usepackage{appendix}
+%
+\usepackage{multirow}
+%
+\usepackage{booktabs,array,dcolumn}
+%
+\usepackage{float}
+%
+\usepackage{eurosym}
+%
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+\captionsetup{compatibility=false}
+\usepackage{subcaption}
+%
+\usepackage[toc]{glossaries}
+\makeglossaries
+%
+\usepackage{amssymb}
+\setcounter{tocdepth}{4}
+%
+\usepackage{url}
+\urldef{\mailsa}\path|info@southeastmakerspace.org|
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+%Optional Package to add PDF bookmarks and hypertext links
+\usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,urlcolor=black,bookmarksnumbered=true,pdfview=FitB}
+
+\begin{document}
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Buzz Wire Game Instructions}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Buzz Wire Game}
+%
+
+% the name(s) of the author(s) follow(s) next
+%
+% Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Aileen Drohan%
+%\thanks{Please note that the LNCS Editorial assumes that all authors have used
+%the western naming convention, with given names preceding surnames. This determines
+%the structure of the names in the running heads and the author index.}%
+\and David Kirwan \and Padraig Murphy}
+%
+\authorrunning{Buzz Wire Game}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+\institute{South East Makerspace,\\Old Printworks, Thomas Hill,\\Waterford City, X91 TW63\\
+\mailsa\\
+\url{https://www.southeastmakerspace.org}}
+%
+
+%
+% a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "llncs.dem"
+% (search for the string "\mainmatter" where a contribution starts).
+% "llncs.dem" accompanies the document class "llncs.cls".
+%
+%\toctitle{Thesis Proposal}
+\tocauthor{SEMS}
+\maketitle
+
+%
+\begin{abstract}
+\begin{figure}
+	\centering
+	\includegraphics[width=8cm]{images/sems}
+\end{figure}
+During this workshop, attendees build a buzz wire game system. The aim of which is to guide a loop through a wire maze without touching the wire. Each participant receives a pack containing all the components required to build the game. No prior soldering experience is required, training will be provided on the day. The only requirement the will to learn, and a packed lunch!
+\keywords{analogue electronics, prototyping, buzz wire}
+\end{abstract}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Acknowledgements
+%\newpage
+%\include{preface/acknowledgements}
+%
+
+%
+\tableofcontents
+%
+
+%
+%\newpage
+%\listoffigures
+%\addcontentsline{toc}{chapter}{List of Figures}
+%
+
+%
+%\newpage
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%
+\include{body/introduction}
+\include{body/conclusions}
+%
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\include{glossary/glossary}
+%\renewcommand*{\glsclearpage}{}
+%\printglossaries
+%
+
+%
+%\appendix
+%\include{apendices/appendix}
+%
+
+%
+%\bibliographystyle{plainnat}
+%\bibliography{bibliography/bibtex}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%
+
+\end{document}
+
+
