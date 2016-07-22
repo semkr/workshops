@@ -9,6 +9,7 @@ A list of workshops run at the South East Makerspace.
 
 .Completed
 
+- https://wiki.southeastmakerspace.org/projects/workshops/2016/buzz_wire[Buzz Wire]
 - https://wiki.southeastmakerspace.org/projects/workshops/2016/iot_wit[Internet of Things]
 - https://wiki.southeastmakerspace.org/projects/workshops/2016/introduction_to_arduino[Introduction to Arduino]
 
