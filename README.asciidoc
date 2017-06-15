@@ -2,6 +2,15 @@
 
 A list of workshops run at the South East Makerspace.
 
+=== 2017 ===
+
+.Upcoming
+
+
+.Completed
+
+- https://wiki.southeastmakerspace.org/projects/workshops/2017/iot_wit[Internet of Things]
+
 === 2016 ===
 
 .Upcoming
