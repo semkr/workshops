@@ -32,7 +32,7 @@ void draw() {
   ellipse( random( 0, width), random( 0, height), circSize, circSize);
 
   // KEEP CIRCLE IN BOUNDS so no negative values - could also define a maximum
-  if (circSize <=10 ) {
+  if (circSize >=400 ) {
     circSize = 10;
   }
 }
